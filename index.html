@@ -5,32 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./index.css" rel="stylesheet">
-  <title>Bo Smith & Sons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+  <title>Bo Smith & Sons - Home Remodeling</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#photos">Photos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-</header>
   <main>
-    <div class="home" style="background-image: url(./assets/renovated-bathroom.jpg)"></div>
-    <div class="about" id="about">
-      <p>I am Bo Smith.</p>
+    <div data-content="shown" id="home" class="home">
+      <div class="splash-background" style="background-image: url(./assets/renovated-bathroom.jpg);"></div>
+      <p class="company-title">Bo Smith & Sons</p>
+      <p class="company-slogan"><i>Improving houses into homes</i></p>
     </div>
-    <div class="photos" id="photos">
+    <div data-content="hidden" class="about" id="about">
+      <p>I am Bo Smith.</p>
+      <div style="background-image: url(./assets/bo-cover-photo.png)"></div>
+    </div>
+    <div data-content="hidden" class="photos" id="photos">
       <div>Photos here.</div>
     </div>
-    <div class="contact" id="contact">
+    <div data-content="hidden" class="contact" id="contact">
       <a href="facebook.com">Facebook</a>
       <a href="twitter.com">Twitter</a>
       <a href="linkedin.com">LinkedIn</a>
-
     </div>
   </main>
-  <footer></footer>
+  <nav>
+    <a data-state="active" href="#">Home</a>
+    <a data-state="inactive" href="#about">About</a>
+    <a data-state="inactive" href="#photos">Photos</a>
+    <a data-state="inactive" href="#contact">Contact</a>
+  </nav>
 </body>
+<script src="index.js"></script>
 </html>
