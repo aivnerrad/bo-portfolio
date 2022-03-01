@@ -6,25 +6,32 @@ body, html {
   height: 100%;
   width: 100%;
 }
-a{
-  text-decoration: none;
-  color: white;
-  font-size: 1.1em;
-}
-a:hover{
+
+.tab:hover {
   font-size: 1.2em;
   transition-duration: 500ms;
-  color: #01FE43;
+  color: #686969;
 }
-nav{
+nav, .tab{
   position: relative;
-  background-color: #686969;
+  background-color: #01FE03;
   height: 100%;
-  flex-basis: 50%;
+  width: 100%;
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  color: #D0D0C5;
+  font-size: 1.1em;
+}
+.tab{
+  height: 3em;
+  flex-basis: 100%;
+}
+.tab:hover{
+  cursor: pointer;
+  filter: brightness(.75);
 }
 main{
   flex-basis: 100%;
@@ -57,4 +64,34 @@ main{
   font-size: 1.5em;
   font-weight: 500;
   color: white;
+}
+.about{
+  height: 100%;
+  flex-basis: 100%;
+}
+.slideshow{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  filter: brightness(.85);
+  transition: background-image 1500ms ease-in-out;
+}
+
+.contact {
+  background-color: #959696;
+  height: 100%;
+  width: 100%;
+}
+
+.fa-facebook{
+  height: 2em;
+  width: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/facebook-f.svg");
 }

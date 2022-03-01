@@ -17,24 +17,26 @@
       <p class="company-title">Bo Smith & Sons</p>
       <p class="company-slogan"><i>Improving houses into homes</i></p>
     </div>
-    <div data-content="hidden" class="about" id="about">
-      <p>I am Bo Smith.</p>
+    <div data-content="hidden" id="about" class="about">
+      <div class="slideshow"></div>
+      <p>Bo Smith & Sons </p>
       <div style="background-image: url(./assets/bo-cover-photo.png)"></div>
     </div>
     <div data-content="hidden" class="photos" id="photos">
       <div>Photos here.</div>
     </div>
     <div data-content="hidden" class="contact" id="contact">
+      <i class="fa-brands fa-facebook"></i>
       <a href="facebook.com">Facebook</a>
       <a href="twitter.com">Twitter</a>
       <a href="linkedin.com">LinkedIn</a>
     </div>
   </main>
   <nav>
-    <a data-state="active" href="#">Home</a>
-    <a data-state="inactive" href="#about">About</a>
-    <a data-state="inactive" href="#photos">Photos</a>
-    <a data-state="inactive" href="#contact">Contact</a>
+    <div data-state="active" class="tab">Home</div>
+    <div data-state="inactive" class="tab">About</div>
+    <div data-state="inactive" class="tab">Photos</div>
+    <div data-state="inactive" class="tab">Contact</div>
   </nav>
 </body>
 <script src="index.js"></script>
