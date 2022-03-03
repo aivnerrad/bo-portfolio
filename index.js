@@ -37,8 +37,8 @@ const magicPicture = document.querySelector(".bo-magic");
 const magicText = document.querySelector(".magic-text")
 
 const showText = (e) => {
-  magicText.style.left = e.pageX-315 + 'px';
-  magicText.style.top = e.pageY-135 + 'px';
+  magicText.style.left = e.pageX-260 + 'px';
+  magicText.style.top = e.pageY-100 + 'px';
 }
 
 magicPicture.addEventListener("mousemove", showText)
