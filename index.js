@@ -31,3 +31,21 @@ const changeBackground = () => {
   if(image === aboutBackgroundImages.length) image = 0;
 }
 changeBackground()
+
+
+const magicPicture = document.querySelector(".bo-magic");
+const magicText = document.querySelector(".magic-text")
+
+const showText = (e) => {
+  magicText.style.left = e.pageX-315 + 'px';
+  magicText.style.top = e.pageY-135 + 'px';
+}
+
+magicPicture.addEventListener("mousemove", showText)
+
+const doMagic = () => {
+  magicPicture.dataset.age === "before" ? magicPicture.dataset.age = "after" : magicPicture.dataset.age = "before"
+  magicPicture.dataset.age === "before" ? magicPicture.style.backgroundImage = "url(./assets/bo-before.png)" : magicPicture.style.backgroundImage = "url(./assets/bo-after.png)"
+  console.log({"magicPicture": magicPicture.dataset.age})
+}
+ magicPicture.addEventListener("click", doMagic)
