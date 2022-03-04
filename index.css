@@ -1,3 +1,8 @@
+/********************
+    Site wide styles
+*********************/
+
+*{box-sizing: border-box;}
 body, html {
   margin: 0;
   font-size: 18px;
@@ -6,44 +11,47 @@ body, html {
   height: 100%;
   flex-basis: 100%;
 }
+main{
+  flex-basis: 100%;
+}
 p{
   margin: 0;
 }
 a{
-  text-decoration: none;
   color: black;
 }
-
-.tab:hover {
-  font-size: 1.2em;
-  transition-duration: 500ms;
-  color: black;
-}
+/*******************
+    Nav-bar styling
+********************/
 nav, .tab{
   position: relative;
   background-color: #01FE03;
   height: 100%;
   width: 100%;
   flex-basis: 30%;
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   color: #696969;
   font-size: 1.1em;
+
 }
-.tab{
-  height: 3em;
-  flex-basis: 100%;
+.tab:hover {
+  font-size: 1.2em;
+  transition-duration: 500ms;
+  color: black;
 }
 .tab:hover, .tab[data-state=active] {
   cursor: pointer;
   filter: brightness(.75);
   color: black;
 }
-main{
-  flex-basis: 100%;
-}
+
+/*******************
+  Home Page Styling
+********************/
 .splash-background{
   background-size: cover;
   background-position: center;
@@ -73,6 +81,10 @@ main{
   font-weight: 500;
   color: white;
 }
+
+/********************
+  About Page Styling
+*********************/
 .about{
   height: 100%;
   flex-basis: 100%;
@@ -103,6 +115,7 @@ main{
   font-size: 1.5em;
   margin: .5em;
 }
+/*"Magic" image styling (based on screen size)*/
 @media screen and (min-width:1100px) {
   .bo-magic{
     height: 55%;
@@ -132,6 +145,18 @@ main{
   margin: 1em;
   line-height: 1.75em;
 }
+
+
+.services{
+  background-color: #D0D0C5;
+  height: 100%;
+  flex-basis: 100%;
+}
+
+/***********************
+  Contact page styling
+************************/
+
 .contact {
   background-color: #696969;
   height: 100%;
@@ -143,12 +168,14 @@ main{
 .left-contact{
   background-color: #01FE03;
   height: 100%;
-  flex-basis: 100%;
+  flex-basis: 70%;
+  max-width: 250px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   color: black;
+  padding: 1em;
 }
 .right-contact{
   height: 100%;
@@ -156,10 +183,11 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .facebook-icon{
-  height: 1em;
-  width: 1em;
+  height: 16px;
+  flex-basis: 30%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -168,21 +196,39 @@ main{
 
 .social-media{
   display: flex;
-  width: 6em;
   align-items: center;
   justify-content: space-between;
-  color: #01FE03;
+  flex-direction: column;
 }
+.header{
+  font-size: 1.1em;
+  border-bottom: 1px solid black;
+  margin: 1em;
+  flex-basis: 100%;
+}
+.social-media-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 100%;
 
+}
 .portfolio-pic{
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: top center;
   height: 20em;
-  flex-basis: 100%;
+  width: 60%;
   border-radius: 10%;
 }
+.contact-header{
+  font-size: 2em;
+  border-bottom: 1px solid black;
+  margin: 1em;
+}
 
-.services{
-  background-color: #D0D0C5;
-  height: 100%;
-  flex-basis: 100%;
+.hours-of-operation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
