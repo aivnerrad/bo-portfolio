@@ -4,14 +4,14 @@ body, html {
   font-family: "Exo", sans-serif;
   display: flex;
   height: 100%;
-  width: 100%;
+  flex-basis: 100%;
 }
 p{
   margin: 0;
 }
 a{
   text-decoration: none;
-  color: #01FE03;
+  color: black;
 }
 
 .tab:hover {
@@ -36,9 +36,10 @@ nav, .tab{
   height: 3em;
   flex-basis: 100%;
 }
-.tab:hover{
+.tab:hover, .tab[data-state=active] {
   cursor: pointer;
   filter: brightness(.75);
+  color: black;
 }
 main{
   flex-basis: 100%;
@@ -134,13 +135,28 @@ main{
 .contact {
   background-color: #696969;
   height: 100%;
-  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-contact{
+  background-color: #01FE03;
+  height: 100%;
+  flex-basis: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: black;
 }
-
+.right-contact{
+  height: 100%;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .facebook-icon{
   height: 1em;
   width: 1em;
@@ -161,6 +177,12 @@ main{
 .portfolio-pic{
   background-position: top center;
   height: 20em;
-  width: 15em;
+  flex-basis: 100%;
   border-radius: 10%;
+}
+
+.services{
+  background-color: #D0D0C5;
+  height: 100%;
+  flex-basis: 100%;
 }
