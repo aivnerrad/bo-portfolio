@@ -1,7 +1,7 @@
 /********************
     Site wide styles
 *********************/
-*{box-sizing: border-box;}
+*, *::before, *::after{box-sizing: border-box;}
 body, html {
   margin: 0;
   font-size: 18px;
@@ -20,6 +20,7 @@ p{
 }
 a{
   color: black;
+  text-align: center;
 }
 /*******************
     Nav-bar styling
@@ -29,17 +30,18 @@ nav, .tab{
   background-color: #01FE03;
   height: 100%;
   width: 100%;
+  max-width: 200px;
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   color: #696969;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 
 }
 .tab:hover {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   transition-duration: 500ms;
   color: black;
 }
@@ -71,13 +73,13 @@ nav, .tab{
 }
 .company-title {
   position: relative;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 800;
   color: white;
 }
 .company-slogan{
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 500;
   color: white;
 }
@@ -112,7 +114,7 @@ nav, .tab{
   color: white;
 }
 .about-article-header{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: .5em;
 }
 /*"Magic" image styling (based on screen size)*/
@@ -165,6 +167,7 @@ nav, .tab{
 .left-contact{
   background-color: #01FE03;
   height: 100%;
+  min-width: 170px;
   flex-basis: 20%;
   display: flex;
   align-items: center;
@@ -182,8 +185,8 @@ nav, .tab{
   flex-direction: column;
 }
 .facebook-icon{
-  height: 16px;
-  flex-basis: 30%;
+  height: 4rem;
+  width: 4rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -198,28 +201,30 @@ nav, .tab{
 }
 .header{
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.1rem;
+  font-weight: 500;
   border-bottom: 1px solid black;
   flex-basis: 100%;
-  margin: 1em 0;
+  margin: .55em 0;
 }
 .social-media-link{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-basis: 100%;
+  justify-content: space-evenly;
+  width: 85%;
 
 }
 .portfolio-pic{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 20em;
-  width: 60%;
-  border-radius: 10%;
+  height: 20rem;
+  min-width: 175px;
+  width: 40%;
+  border-radius: 10px;
 }
 .contact-header{
-  font-size: 2em;
+  font-size: 1.65rem;
   border-bottom: 1px solid black;
   margin: 1em;
 }
@@ -235,5 +240,8 @@ nav, .tab{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
 
+.phone-label{
+  margin: .15em;
 }
