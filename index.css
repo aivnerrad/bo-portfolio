@@ -154,6 +154,12 @@ nav, .tab{
   background-color: #696969;
   color: white;
 }
+@media screen and (max-width: 768px){
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .service-areas{
   font-size: 1.3rem;
   color: white;
@@ -165,8 +171,9 @@ nav, .tab{
 .service-header-container{
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 70%;
   justify-content: space-evenly;
+  margin: .4em;
 }
 .service-icon{
   height: 16px;
@@ -177,7 +184,7 @@ nav, .tab{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   text-align: center;
 }
 .service-city{
@@ -189,7 +196,18 @@ nav, .tab{
   position: relative;
   bottom: 1.95em;
 }
-
+.service-header{
+  font-size: 1.3rem;
+  text-align: center;
+  margin: .5em;
+}
+.single-service{
+  height: 2rem;
+  width: 100%;
+}
+.service-name{
+  text-align: center;
+}
 /***********************
   Contact page styling
 ************************/
